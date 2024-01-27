@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
 
 tables = [(f"table({i+1})-seat({j+1})") for i in range(6) for j in range(4)]
+print(tables)
 
 # Loop through the list of names and assign them to tables and seats
 with open("seating.txt", "w") as f:
@@ -20,6 +21,7 @@ with open("seating.txt", "w") as f:
         table_seat = tables[i]
         # Write the name, table, and seat to the file
         f.write(f"{name} is assigned to {table_seat}\n")
+     
 openspace = OpenSpace(tables, 6)
 openspace.organize(names) 
 openspace.display() 
