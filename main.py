@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
 tables = [(f"table({i+1})-seat({j+1})") for i in range(6) for j in range(4)]
 print(tables)
-
+random.shuffle(names)
 # Loop through the list of names and assign them to tables and seats
 with open("seating.txt", "w") as f:
     for i, name in enumerate(names):
